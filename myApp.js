@@ -5,7 +5,13 @@ let viewsIndex = __dirname + '/views/index.html'
 let publicStyle = __dirname + '/public/style.css'
 
 app.get('/json', (req, res) => {
+  if(MESSAGE_STYLE == 'uppercase') {
+    res.json({"message": "HELLO JSON"})
+  } 
+  else {
   res.json({"message": "Hello json"})
+  }
+
 })
 
 app.get("/", (req, res) => {
