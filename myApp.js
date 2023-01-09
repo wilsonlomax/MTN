@@ -5,7 +5,7 @@ let viewsIndex = __dirname + '/views/index.html'
 let publicStyle = __dirname + '/public/style.css'
 
 app.get('/json', (req, res) => {
-  res.json({"message": "Hello World"})
+  res.json({"message": "Hello json"})
 })
 
 app.get("/", (req, res) => {
