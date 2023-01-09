@@ -12,6 +12,10 @@ app.use(express.static('/public'), (req, res) => {
   res.sendFile(publicStyle)
 })
 
+app.get("/json", (req, res) => {
+  res.json({"message": "Hello World"})
+})
+
 
 console.log("Hello World");
 
