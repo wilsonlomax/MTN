@@ -1,10 +1,15 @@
 const { Router } = require('express');
 let express = require('express');
 let app = express();
-let absolutePath = __dirname + '/views/index.html'
+let viewsIndex = __dirname + '/views/index.html'
+let publicStyle = __dirname + '/public/style.css'
 
 app.get("/", (req, res) => {
-  res.sendFile(absolutePath)
+  res.sendFile(viewsIndex)
+})
+
+app.use(express.static('/public'), (req, res) => {
+  res.sendFile(publicStyle)
 })
 
 
