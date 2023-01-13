@@ -10,7 +10,7 @@ app.get('/now', function middleware(req, res, next) {
   req.time = new Date().toString()
   next()
 }, (req, res) => {
-  res.send({time: req.time})
+  res.send(req.time)
 })
 
 /*app.use(function middleware(req, res, next) {
