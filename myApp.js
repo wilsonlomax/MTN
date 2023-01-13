@@ -4,7 +4,7 @@ let dotenv = require('dotenv').config();
 let app = express();
 let viewsIndex = __dirname + '/views/index.html'
 let publicStyle = __dirname + '/public/style.css'
-let response = 'Hello World'
+let response = 'Hello json'
 
 app.get('/json', (req, res) => {
   if(process.env.MESSAGE_STYLE === 'uppercase') {
