@@ -11,7 +11,7 @@ app.use(function middleware(req, res, next) {
   next()
 })
 
-app.get('/now', (req, res, next) => {
+app.get('/now', function middleware(req, res, next) {
   req.time = new Date().toString()
   next()
 }, (req, res) => {
