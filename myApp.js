@@ -5,10 +5,9 @@ let app = express();
 let viewsIndex = __dirname + '/views/index.html'
 let publicStyle = __dirname + '/public/style.css'
 let response = 'Hello json'
-let reqString = req.method + " " + req.path + " - " + req.ip
 
 app.use(function middleware(req, res, next) {
-  console.log(reqString)
+  console.log(req.method + " " + req.path + " - " + req.ip)
   next()
 })
 
