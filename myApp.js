@@ -13,10 +13,10 @@ app.get('/now', function middleware(req, res, next) {
   res.send({time: req.time})
 })
 
-app.use(function middleware(req, res, next) {
+/*app.use(function middleware(req, res, next) {
   console.log(req.method + " " + req.path + " - " + req.ip)
   next()
-})
+})*/
 
 
 app.get('/json', (req, res) => {
